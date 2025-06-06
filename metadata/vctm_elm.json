@@ -1,0 +1,26 @@
+{
+  "vct": "urn:eudi:elm:1",
+  "name": "ELM Credential",
+  "description": "European Learning Model (ELM) Credential.",
+  "$comment": "",
+  "display": [
+    {
+      "lang": "en-US",
+      "name": "ELM Credential",
+      "description": "Portable European Learning Model (ELM) Credential.",
+      "rendering": {
+        "svg_templates": [
+          {
+            "uri": "https://github.com/dc4eu/vc/blob/d5bcc09ad66fb8491d0694f48d60371fc6ac9e04/images/generic-diploma-card-svg-dc4eu-01.svg",
+            "uri#integrity": "sha256-wLet7Ra2LR80J8oXFR9aoB902q8va1eSRhO0JA6apG8",
+            "properties": {
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "claims": [],
+  "schema_uri": "",
+  "schema_uri#integrity": ""
+}

@@ -1,0 +1,15 @@
+bin/
+pki/*
+!pki/create_pki.sh
+redis-data/
+.idea/
+kraft[0-9]*-data/
+*.orig
+**/.*.orig
+developer_tools/*.pem
+developer_tools/*.csr
+developer_tools/*.cnf
+.env
+.~lock.*.csv#
+developer_tools/pki/*
+!developer_tools/pki/create_pki.sh

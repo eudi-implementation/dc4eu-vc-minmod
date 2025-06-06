@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package v1.issuer;
+
+option go_package = "vc/internal/gen/issuer/apiv1_issuer";
+
+//import "google/protobuf/timestamp.proto";
+//import "google/protobuf/any.proto";
+
+service IssuerService {
+    rpc MakeSDJWT (MakeSDJWTRequest) returns (MakeSDJWTReply) {}
+    rpc JWKS (Empty) returns (JwksReply) {}
+}
+
+message MakeSDJWTRequest {
+    string documentType = 1;
+    bytes documentData = 2;
+    jwk jwk =3;
+}
+
+message MakeSDJWTReply {
+   repeated Credential credentials = 1;
+}
+
+message Credential {
+   string credential = 1;
+}
+
+message Empty {
+}
+
+message JwksReply {
+    string issuer = 1;
+    keys jwks = 2;
+}
+
+message keys {
+    repeated jwk keys = 1;
+}
+
+message jwk {
+    string kid = 1;
+    string crv = 2;
+    string kty = 3;
+    string x = 4;
+    string y = 5;
+    string d = 6;
+}

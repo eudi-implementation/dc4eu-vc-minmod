@@ -1,0 +1,131 @@
+{
+  "credential_issuer": "http://vc_dev_apigw:8080",
+  "credential_endpoint": "http://vc_dev_apigw:8080/credential",
+  "display": [
+    {
+      "name": "SUNET dev Issuer (vc project)",
+      "locale": "en-US"
+    }
+  ],
+  "credential_configurations_supported": {
+    "urn:edui:diploma:1": {
+      "scope": "diploma",
+      "vct": "urn:eudi:diploma:1",
+      "format": "vc+sd-jwt",
+      "display": [
+        {
+          "name": "Bachelor Diploma - SD-JWT VC",
+          "logo": {
+            "uri": "https://raw.githubusercontent.com/dc4eu/vc/10d96c0b1e8d1568a41c7a0a1a095ce1fcc8aec4/images/diploma-logo.svg"
+          },
+          "background_color": "#b1d3ff",
+          "text_color": "#ffffff",
+          "locale": "en-US"
+        }
+      ],
+      "cryptographic_binding_methods_supported": [
+        "ES256"
+      ],
+      "credential_signing_alg_values_supported": [
+        "ES256"
+      ],
+      "proof_types_supported": {
+        "jwt": {
+          "proof_signing_alg_values_supported": [
+            "ES256"
+          ]
+        }
+      }
+    },
+    "urn:eudi:pid:1": {
+      "scope": "pid",
+      "vct": "urn:eudi:pid:1",
+      "format": "vc+sd-jwt",
+      "display": [
+        {
+          "name": "PID SD-JWT VC",
+          "description": "Person Identification Data",
+          "background_image": {
+            "uri": "http://vc_dev_apigw:8080/images/background-image.png"
+          },
+          "background_color": "#1b263b",
+          "text_color": "#FFFFFF",
+          "locale": "en-US"
+        }
+      ],
+      "cryptographic_binding_methods_supported": [
+        "ES256"
+      ],
+      "credential_signing_alg_values_supported": [
+        "ES256"
+      ],
+      "proof_types_supported": {
+        "jwt": {
+          "proof_signing_alg_values_supported": [
+            "ES256"
+          ]
+        }
+      }
+    },
+    "eu.europa.ec.eudi.pid.1": {
+      "scope": "pid:mso_mdoc",
+      "doctype": "eu.europa.ec.eudi.pid.1",
+      "format": "mso_mdoc",
+      "display": [
+        {
+          "name": "PID - MDOC",
+          "description": "Person Identification Data",
+          "background_image": {
+            "uri": "http://vc_dev_apigw:8080/images/background-image.png"
+          },
+          "background_color": "#4CC3DD",
+          "text_color": "#000000",
+          "locale": "en-US"
+        }
+      ],
+      "cryptographic_binding_methods_supported": [
+        "ES256"
+      ],
+      "credential_signing_alg_values_supported": [
+        "ES256"
+      ],
+      "proof_types_supported": {
+        "jwt": {
+          "proof_signing_alg_values_supported": [
+            "ES256"
+          ]
+        }
+      }
+    },
+    "urn:eudi:ehic:1": {
+      "scope": "ehic",
+      "vct": "urn:eudi:ehic:1",
+      "format": "vc+sd-jwt",
+      "display": [
+        {
+          "name": "EHIC - SD-JWT VC",
+          "description": "European Health Insurance Card",
+          "background_image": {
+            "uri": "http://vc_dev_apigw:8080/images/background-image.png"
+          },
+          "background_color": "#1b263b",
+          "text_color": "#FFFFFF",
+          "locale": "en-US"
+        }
+      ],
+      "cryptographic_binding_methods_supported": [
+        "ES256"
+      ],
+      "credential_signing_alg_values_supported": [
+        "ES256"
+      ],
+      "proof_types_supported": {
+        "jwt": {
+          "proof_signing_alg_values_supported": [
+            "ES256"
+          ]
+        }
+      }
+    }
+  }
+}
