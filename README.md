@@ -1,5 +1,9 @@
 # VC
 
+This repository contains the DC4EU VC repository (see below) with minimal modifications. This repo is supposed to be run for example on the same host as the issuer repos so they can pull data from the datastore via the apigw configured in this repo.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 This repository consists of the source code for the VC EU project, but also tools and make targets that's making sense for developers, please do not use for anything else.
 
 Are you looking for running this, and need some sort of starting point, please take a look at <https://github.com/dc4eu/vc_up_and_running>
