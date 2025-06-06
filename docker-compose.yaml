@@ -2,7 +2,7 @@
 services:
   apigw:
     container_name: "vc_dev_apigw"
-    image: docker.sunet.se/dc4eu/apigw:latest
+    image: docker.sunet.se/dc4eu/apigw:0.5.22
     restart: always
     volumes:
       - ./developer_tools/pki/:/pki:ro
@@ -16,10 +16,12 @@ services:
         ipv4_address: 172.16.50.2
     environment:
       - "VC_CONFIG_YAML=config.yaml"
+    ports:
+      - "9080:8080"
 
   ui:
     container_name: "vc_dev_ui"
-    image: docker.sunet.se/dc4eu/ui:latest
+    image: docker.sunet.se/dc4eu/ui:0.5.22
     restart: always
     volumes:
       - ./config.yaml:/config.yaml:ro
@@ -44,7 +46,7 @@ services:
 
   issuer:
     container_name: "vc_dev_issuer"
-    image: docker.sunet.se/dc4eu/issuer:latest
+    image: docker.sunet.se/dc4eu/issuer:0.5.22
     restart: always
     volumes:
       - ./config.yaml:/config.yaml:ro
@@ -61,7 +63,7 @@ services:
 
   verifier:
     container_name: "vc_dev_verifier"
-    image: docker.sunet.se/dc4eu/verifier:latest
+    image: docker.sunet.se/dc4eu/verifier:0.5.22
     restart: always
     volumes:
       - ./config.yaml:/config.yaml:ro
@@ -80,7 +82,7 @@ services:
 
   registry:
     container_name: "vc_dev_registry"
-    image: docker.sunet.se/dc4eu/registry:latest
+    image: docker.sunet.se/dc4eu/registry:0.5.22
     restart: always
     volumes:
       - ./config.yaml:/config.yaml:ro
@@ -94,7 +96,7 @@ services:
 
   persistent:
     container_name: "vc_dev_persistent"
-    image: docker.sunet.se/dc4eu/persistent:latest
+    image: docker.sunet.se/dc4eu/persistent:0.5.22
     restart: always
     volumes:
       - ./config.yaml:/config.yaml:ro
@@ -108,7 +110,7 @@ services:
 
   mockas:
     container_name: "vc_dev_mockas"
-    image: docker.sunet.se/dc4eu/mockas:latest
+    image: docker.sunet.se/dc4eu/mockas:0.5.22
     restart: always
     volumes:
       - ./config.yaml:/config.yaml:ro
@@ -150,7 +152,7 @@ services:
         ipv4_address: 172.16.50.20
 
   portal:
-    image: docker.sunet.se/dc4eu/portal:latest
+    image: docker.sunet.se/dc4eu/portal:0.5.22
     container_name: "vc_dev_portal"
     restart: always
     volumes:
